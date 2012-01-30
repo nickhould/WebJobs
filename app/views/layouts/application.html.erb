@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Webjobs</title>
-  <%= stylesheet_link_tag :all %>
+  <title>Montreal Web Jobs</title>
+  <%= stylesheet_link_tag "custom.css" %>
+  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">  
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
-<body>
 
-<%= yield %>
+<body>
+		  <%= yield %>
 
 </body>
 </html>

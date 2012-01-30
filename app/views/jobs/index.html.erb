@@ -1,0 +1,55 @@
+<div class="topbar">
+  <div class="fill">
+    <div class="container">
+      <a class="brand" href="#">Jobber</a>
+      <ul class="nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<br><br>
+<div class="container">
+  <div class="content">
+    <div class="page-header">
+      <h1>Find a job. <small> Fast.</small></h1>
+    </div>
+    <table>
+	 <tr>
+	   <th>Titre</th>
+	   <th>Entreprise</th>
+	   <th>Date</th>
+	 </tr>
+	<% @jobs.each do |job| %>
+	 <tr>
+	   <td><a class="a plusone"><span class="label success plusone">+1</span></a><span class="jobtitle">
+			<%= if job.title.length > 50 
+						link_to job.title[0,50] + "...", job.job_url 
+					else
+						link_to job.title, job.job_url 
+					end%></span></td>
+	   <td><%= if job.business.length > 50
+		  			   job.business[0,50] + "..."
+						 else
+								job.business
+						 end%></td>
+				 		
+	   <td><%= if job.date_posted != nil 
+							 job.date_posted.strftime('%B %d')
+						 end %></td>
+	 </tr>
+	<% end %>
+	</table>
+
+	<br />
+
+	<%= link_to 'New Job', new_job_path %>
+
+  </div>
+
+  <footer>
+    <p>&copy; Jobber. 2012.</p>
+  </footer>
+
