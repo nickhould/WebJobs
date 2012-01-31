@@ -1,6 +1,11 @@
 Webjobs::Application.routes.draw do
+<<<<<<< HEAD
 
   
+=======
+  resources :jobs
+
+>>>>>>> experimental-1
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
