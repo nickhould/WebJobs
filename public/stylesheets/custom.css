@@ -1,10 +1,8 @@
 /* Override some defaults */
 html, body {
-  background-color: #eee;
+  background-image: url("/images/husk.png");
 }
-body {
-  padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
-}
+
 .container > footer p {
   text-align: center; /* center align it with the container */
 }
@@ -25,12 +23,6 @@ body {
           box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
 
-/* Page header tweaks */
-.page-header {
-  background-color: #f5f5f5;
-  padding: 20px 20px 10px;
-  margin: -20px -20px 20px;
-}
 
 
 /* Give a quick and non-cross-browser friendly divider */
@@ -48,11 +40,25 @@ body {
 	padding: 2px;
 }
 
-.jobtitle {
-	padding: 0px 0px 0px 7px;
-}
-
 a.plusone :hover{
 	background-color: #065500;
 	text-decoration: none;
+}
+
+.page-header{
+	margin: 10px;
+	padding-bottom:15px;
+}
+
+.navbar-inner {
+	background-image: -moz-linear-gradient(top, #61B0FF, #387CFF);
+  background-image: -ms-linear-gradient(top, #61B0FF, #387CFF);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#61B0FF), to(#232051));
+  background-image: -webkit-linear-gradient(top, #61B0FF, #387CFF);
+  background-image: -o-linear-gradient(top, #61B0FF, #387CFF);
+  background-image: linear-gradient(top, #61B0FF, #387CFF);
+}
+
+.nav.active {
+	
 }
