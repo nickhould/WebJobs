@@ -11,7 +11,7 @@ task :fetch_jobs => :environment do
   # Define varible and hash
   page_number = 1
   months = {"Jan" => 1, 
-            "Fev" => 2,
+            "Feb" => 2,
             "Mar" => 3,
             "Avr" => 4,
             "Mai" => 5,
