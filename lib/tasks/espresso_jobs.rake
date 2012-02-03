@@ -1,4 +1,4 @@
-desc "Fetch product prices"
+desc "Fetch Espresso Jobs"
 
 task :fetch_jobs => :environment do
   require 'rubygems'
