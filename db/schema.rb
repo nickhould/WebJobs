@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120128195750) do
+ActiveRecord::Schema.define(:version => 20120204053958) do
 
   create_table "jobs", :force => true do |t|
     t.string   "title"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20120128195750) do
     t.datetime "time_scrapped"
     t.date     "date_posted"
     t.datetime "date_scrapped"
+    t.string   "source"
   end
 
 end

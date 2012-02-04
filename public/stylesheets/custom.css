@@ -36,6 +36,12 @@ html, body {
   border: 0;
 }
 
+h6 {
+	padding: 0 0 0 20px;
+	text-transform:none;
+}
+
+
 .label.success.plusone {
 	padding: 2px;
 }
@@ -48,6 +54,7 @@ a.plusone :hover{
 .page-header{
 	margin: 10px;
 	padding-bottom:15px;
+	border-bottom: 0px;
 }
 
 .navbar-inner {
@@ -61,4 +68,13 @@ a.plusone :hover{
 
 .nav.active {
 	
+}
+
+.brand {
+  font-family: 'Overlock', cursive;
+  font-size: 50px;
+}
+
+.table tr {
+  padding:60px;
 }
