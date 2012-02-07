@@ -23,7 +23,6 @@ task :fetch_jobs => :environment do
             "Nov" => 11,
             "Dec" => 12}
   
-  scrapper = Scrapper.find(:first, :order=> 'ASC')
             
   # Scrapper in action            
   while page_number < number_of_pages_to_scrape+1 do
@@ -41,9 +40,10 @@ task :fetch_jobs => :environment do
         job = Job.create(:title     => title.capitalize,
                          :business  => business.capitalize,
                          :date_scrapped => Time.now,
+                         :date_posted => date_posted,
                          :job_url       => job_url,
                          :time_scrapped => Time.now.gmtime,
-                         :source => scrapper.source)
+                         :scrapper_id => 1)
       end
       
     end   
