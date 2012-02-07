@@ -1,6 +1,6 @@
 /* Override some defaults */
 html, body {
-  background-image: url("/images/husk.png");
+  background-image: url("/images/texturetastic_gray.png");
 }
 
 .container > footer p {
@@ -58,12 +58,12 @@ a.plusone :hover{
 }
 
 .navbar-inner {
-	background-image: -moz-linear-gradient(top, #61B0FF, #387CFF);
-  background-image: -ms-linear-gradient(top, #61B0FF, #387CFF);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#61B0FF), to(#232051));
-  background-image: -webkit-linear-gradient(top, #61B0FF, #387CFF);
-  background-image: -o-linear-gradient(top, #61B0FF, #387CFF);
-  background-image: linear-gradient(top, #61B0FF, #387CFF);
+	background-image: -moz-linear-gradient(top, #4A4E4B, #000000);
+  background-image: -ms-linear-gradient(top, #4A4E4B, #000000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4A4E4B), to(#232051));
+  background-image: -webkit-linear-gradient(top, #4A4E4B, #000000);
+  background-image: -o-linear-gradient(top, #4A4E4B, #000000);
+  background-image: linear-gradient(top, #4A4E4B, #000000);
 }
 
 .nav.active {

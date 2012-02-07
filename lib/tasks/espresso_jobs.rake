@@ -22,6 +22,8 @@ task :fetch_jobs => :environment do
             "Oct" => 10,
             "Nov" => 11,
             "Dec" => 12}
+  
+  scrapper = Scrapper.find(:first, :order=> 'ASC')
             
   # Scrapper in action            
   while page_number < number_of_pages_to_scrape+1 do
@@ -41,8 +43,9 @@ task :fetch_jobs => :environment do
                          :date_scrapped => Time.now,
                          :job_url       => job_url,
                          :time_scrapped => Time.now.gmtime,
-                         :date_posted => date_posted)
+                         :source => scrapper.source)
       end
+      
     end   
     page_number += 1
   end

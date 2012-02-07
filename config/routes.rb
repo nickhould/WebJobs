@@ -1,5 +1,9 @@
 Webjobs::Application.routes.draw do
 
+  resources :line_items
+
+  resources :scrappers
+
   resources :jobs 
 
 

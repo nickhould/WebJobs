@@ -1,0 +1,29 @@
+<h1>Listing scrappers</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Source</th>
+    <th>Task</th>
+    <th>Image url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @scrappers.each do |scrapper| %>
+  <tr>
+    <td><%= scrapper.title %></td>
+    <td><%= scrapper.source %></td>
+    <td><%= scrapper.task %></td>
+    <td><%= scrapper.image_url %></td>
+    <td><%= link_to 'Show', scrapper %></td>
+    <td><%= link_to 'Edit', edit_scrapper_path(scrapper) %></td>
+    <td><%= link_to 'Destroy', scrapper, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Scrapper', new_scrapper_path %>

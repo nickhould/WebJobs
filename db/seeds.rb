@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+
+Scrapper.create(:title => "Espresso-Jobs", 
+                :source =>"http://www.espresso-jobs.com/",
+                :task => "fetch_jobs",
+                :image_url => "espresso_icon.png")
+                
+Scrapper.create(:title => "Grenier aux Emplois", 
+                :source =>"http://www.grenier.qc.ca/emplois",
+                :task => "fetch_grenier_jobs",
+                :image_url => "espresso_icon.png")

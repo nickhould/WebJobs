@@ -17,24 +17,27 @@
     </div>
     <table class="table table-condensed">
 	 <tr>
+		 <th>     </th>
 	   <th>Titre</th>
 	   <th>Entreprise</th>
 	   <th>Date</th>
 	 </tr>
-	<% @jobs.each do |job| %>
+	<%  for job in @jobs %>
+	
 	 <tr>
+		<td> </td>
 	   <td><span class="jobtitle">
-		  <%= image_tag "grenier_icon.jpg" %>
 			<%= if job.title.length > 50 
 						link_to job.title[0,50] + "...", job.job_url 
 					else
 						link_to job.title, job.job_url 
 					end%></span></td>
 	   <td><%= if job.business.length > 50
-		  			   job.business[0,50] + "..."
-						 else
-								job.business
-						 end%></td>
+							job_business = job.business[0,50].titleize + "..." 
+ 					   else
+						  job.business.titleize
+						 end %>
+						 </td>
 				 		
 	   <td><%= if job.date_posted != nil 
 							 job.date_posted.strftime('%B %d')

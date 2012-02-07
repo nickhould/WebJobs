@@ -3,7 +3,7 @@ class JobsController < ApplicationController
   # GET /jobs.xml
   def index
     @jobs = Job.order("date_posted DESC").page(params[:page]).per(20)
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @jobs }
@@ -25,7 +25,7 @@ class JobsController < ApplicationController
   # GET /jobs/new.xml
   def new
     @job = Job.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @job }
@@ -41,7 +41,7 @@ class JobsController < ApplicationController
   # POST /jobs.xml
   def create
     @job = Job.new(params[:job])
-
+    
     respond_to do |format|
       if @job.save
         format.html { redirect_to(@job, :notice => 'Job was successfully created.') }
