@@ -1,80 +1,13 @@
 /* Override some defaults */
 html, body {
-  background-image: url("/images/texturetastic_gray.png");
-}
-
-.container > footer p {
-  text-align: center; /* center align it with the container */
-}
-.container {
-  width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
-}
-
-/* The white background content wrapper */
-.content {
-  background-color: #fff;
-  padding: 20px;
-  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
-  -webkit-border-radius: 0 0 6px 6px;
-     -moz-border-radius: 0 0 6px 6px;
-          border-radius: 0 0 6px 6px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-          box-shadow: 0 1px 2px rgba(0,0,0,.15);
-}
-
-
-
-/* Give a quick and non-cross-browser friendly divider */
-.content .span4 {
-  margin-left: 0;
-  padding-left: 19px;
-  border-left: 1px solid #eee;
-}
-
-.topbar .btn {
-  border: 0;
-}
-
-h6 {
-	padding: 0 0 0 20px;
-	text-transform:none;
-}
-
-
-.label.success.plusone {
-	padding: 2px;
-}
-
-a.plusone :hover{
-	background-color: #065500;
-	text-decoration: none;
-}
-
-.page-header{
-	margin: 10px;
-	padding-bottom:15px;
-	border-bottom: 0px;
+  background-image: url("/images/paper.png");
 }
 
 .navbar-inner {
-	background-image: -moz-linear-gradient(top, #4A4E4B, #000000);
-  background-image: -ms-linear-gradient(top, #4A4E4B, #000000);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4A4E4B), to(#232051));
-  background-image: -webkit-linear-gradient(top, #4A4E4B, #000000);
-  background-image: -o-linear-gradient(top, #4A4E4B, #000000);
-  background-image: linear-gradient(top, #4A4E4B, #000000);
+	background-image: url("/images/snow.png");  
 }
 
-.nav.active {
-	
+.content {
+	padding:50px 0px 0px 0px;
 }
 
-.brand {
-  font-family: 'Overlock', cursive;
-  font-size: 50px;
-}
-
-.table tr {
-  padding:60px;
-}
