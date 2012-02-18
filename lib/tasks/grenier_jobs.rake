@@ -73,7 +73,12 @@ task :fetch_grenier_jobs => :environment do
                        :date_scrapped => Time.now,
                        :job_url       => job_url,
                        :time_scrapped => Time.now.gmtime,
-                       :date_posted => date_posted)
+                       :date_posted => date_posted,
+                       :scrapper_id => 2)
     end
+    
+     line_item = LineItem.create(:job_id => job.id,
+                                  :scrapper_id => 2)
+                              
   end
 end

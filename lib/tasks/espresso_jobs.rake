@@ -46,6 +46,9 @@ task :fetch_jobs => :environment do
                          :scrapper_id => 1)
       end
       
+      line_item = LineItem.create(:job_id => job.id,
+                                  :scrapper_id => 1)
+      
     end   
     page_number += 1
   end

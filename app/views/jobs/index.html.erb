@@ -3,7 +3,6 @@
     <div class="container">
       <a class="brand" href="#">Jobber</a>
       <ul class="nav">
-        <li class="active"><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -22,15 +21,17 @@
 	   <th>Entreprise</th>
 	   <th>Date</th>
 	 </tr>
-	<%  for job in @jobs %>
-	
+	<%  for job in @jobs 
+	scrapper = Scrapper.find(job.line_items.first.scrapper_id)	
+	%>
 	 <tr>
-		<td> </td>
+		<td><%= link_to image_tag("#{scrapper.image_url}"), scrapper.source %> </td>
 	   <td><span class="jobtitle">
 			<%= if job.title.length > 50 
 						link_to job.title[0,50] + "...", job.job_url 
 					else
 						link_to job.title, job.job_url 
+						
 					end%></span></td>
 	   <td><%= if job.business.length > 50
 							job_business = job.business[0,50].titleize + "..." 

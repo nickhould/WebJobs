@@ -2,9 +2,9 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.xml
   def index
-    @jobs = Job.order("date_posted DESC").page(params[:page]).per(20)
-
+    @jobs = Job.page(params[:page]).per(20)
     
+  	
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @jobs }
