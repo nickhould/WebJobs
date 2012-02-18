@@ -14,7 +14,7 @@
     <div class="page-header">
       <h1>Find a job. <small> Fast.</small></h1>
     </div>
-    <table class="table table-condensed">
+    <table class="table">
 	 <tr>
 		 <th>     </th>
 	   <th>Titre</th>
@@ -25,7 +25,7 @@
 	scrapper = Scrapper.find(job.line_items.first.scrapper_id)	
 	%>
 	 <tr>
-		<td><%= link_to image_tag("#{scrapper.image_url}"), scrapper.source %> </td>
+		<td><%= link_to image_tag("#{scrapper.image_url}"), job.job_url %> </td>
 	   <td><span class="jobtitle">
 			<%= if job.title.length > 50 
 						link_to job.title[0,50] + "...", job.job_url 
