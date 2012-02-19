@@ -1,5 +1,5 @@
 class Job < ActiveRecord::Base
-  validates_uniqueness_of :title, :scope => [:date_posted, :business, :job_url]
+  validates_uniqueness_of :title, :scope => [:date_posted, :business]
   has_many :line_items
   has_many :scrappers, :through => :line_items 
   default_scope :order => "date_posted DESC"
