@@ -6,4 +6,4 @@ gem 'nokogiri'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'heroku'
 gem 'kaminari'
-
+gem 'rails-i18n'

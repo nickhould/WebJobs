@@ -3,8 +3,8 @@
     <div class="container">
       <a class="brand" href="#">Jobber</a>
       <ul class="nav">
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#contact">Contactez-nous</a></li>
       </ul>
     </div>
   </div>
@@ -12,11 +12,11 @@
 <div class="container">
   <div class="content">
     <div class="page-header">
-      <h1>Find a job. <small> Fast.</small></h1>
+      <h1>Trouvez un emploi. <small> Vite.</small></h1>
     </div>
     <table class="table">
 	 <tr>
-		 <th>     </th>
+		 <th>Source</th>
 	   <th>Titre</th>
 	   <th>Entreprise</th>
 	   <th>Date</th>
@@ -41,7 +41,9 @@
 						 </td>
 				 		
 	   <td><%= if job.date_posted != nil 
-							 job.date_posted.strftime('%B %d')
+							 
+							 job.date_posted.strftime('%e') + " " + 				      t("date.month_names")[job.date_posted.month].titleize 
+							 
 						 end %></td>
 	 </tr>
 	<% end %>
