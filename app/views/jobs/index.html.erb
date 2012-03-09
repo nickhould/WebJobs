@@ -12,21 +12,29 @@
 <div class="container">
   <div class="content">
     <div class="page-header">
-      <h1>Trouvez un emploi. <small> Vite.</small></h1>
+   <!--   <h1>Trouvez un emploi. <small> Vite.</small></h1> */-->
     </div>
-    <table class="table">
+		<form class="well form-search">
+			      <input type="text" class="input-x-large">
+			      <button class="btn" type="submit" class="btn">
+			      	<div style="font-size: 24px;">
+							  <i class="icon-search"></i> 
+							</div>
+			      </button>
+			    </form>
+    <table class="table table-striped">
 	 <tr>
-		 <th>Source</th>
 	   <th>Titre</th>
 	   <th>Entreprise</th>
 	   <th>Date</th>
+		 <th class="right"></th>
+	
 	 </tr>
 	<%  for job in @jobs 
 	scrapper = Scrapper.find(job.line_items.first.scrapper_id)	
 	%>
 	 <tr>
-		<td><%= link_to image_tag("#{scrapper.image_url}"), job.job_url %> </td>
-	   <td><span class="jobtitle">
+	   <td><span class="jobtitle">		
 			<%= if job.title.length > 50 
 						link_to job.title[0,50] + "...", job.job_url 
 					else
@@ -39,12 +47,13 @@
 						  job.business.titleize
 						 end %>
 						 </td>
-				 		
 	   <td><%= if job.date_posted != nil 
 							 
 							 job.date_posted.strftime('%e') + " " + 				      t("date.month_names")[job.date_posted.month].titleize 
 							 
 						 end %></td>
+		<td><%= link_to image_tag("#{scrapper.image_url}"), job.job_url %> </td> 		
+		
 	 </tr>
 	<% end %>
 	</table>

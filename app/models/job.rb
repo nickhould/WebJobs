@@ -1,9 +1,17 @@
 class Job < ActiveRecord::Base
   validates_uniqueness_of :title, :scope => [:date_posted, :business]
+  
+  default_scope :order => "date_posted DESC"
+  
+  #Scrappers
   has_many :line_items
   has_many :scrappers, :through => :line_items 
-  default_scope :order => "date_posted DESC"
-
+  
+  #Tags
+  acts_as_taggable
+  acts_as_taggable_on :tags
+  scope :by_join_date, order("created_at DESC")
+  
   def self.promo_true
     User.find(self.joins.find_by_promo(true).user_id)
   end

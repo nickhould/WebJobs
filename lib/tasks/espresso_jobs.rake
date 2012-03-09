@@ -1,6 +1,6 @@
 desc "Fetch Espresso Jobs"
 
-task :fetch_jobs => :environment do
+task :fetch_espresso_jobs => :environment do
   require 'rubygems'
   require 'nokogiri'
   require 'open-uri'
@@ -36,6 +36,7 @@ task :fetch_jobs => :environment do
       month_posted = months[post.css('div.date span.month').text].to_s
       year_posted = Time.now.year.to_s
       date_posted =  year_posted + '-' + month_posted + '-' + day_posted
+      tag_list = title.split + business.split
       if !business.empty?
         job = Job.create(:title     => title.capitalize,
                          :business  => business.capitalize,
@@ -43,7 +44,8 @@ task :fetch_jobs => :environment do
                          :date_posted => date_posted,
                          :job_url       => job_url,
                          :time_scrapped => Time.now.gmtime,
-                         :scrapper_id => 1)
+                         :scrapper_id => 1,
+                         :tag_list => tag_list)
         
         line_item = LineItem.create(:job_id => job.id,
                                     :scrapper_id => 1)
