@@ -9,10 +9,15 @@
 
 Scrapper.create(:title => "Espresso-Jobs", 
                 :source =>"http://www.espresso-jobs.com/",
-                :task => "fetch_jobs",
+                :task => "fetch_espresso_jobs",
                 :image_url => "espresso_icon.png")
                 
 Scrapper.create(:title => "Grenier aux Emplois", 
                 :source =>"http://www.grenier.qc.ca/emplois",
                 :task => "fetch_grenier_jobs",
-                :image_url => "espresso_icon.png")
+                :image_url => "grenier_icon.jpg")
+
+Scrapper.create(:title => "Infopresse", 
+                :source =>"http://www3.infopresse.com/jobs/",
+                :task => "fetch_infopresse_jobs",
+                :image_url => "infopresse_icon.png")

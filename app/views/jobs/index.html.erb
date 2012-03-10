@@ -1,11 +1,19 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">Jobber</a>
+      <a class="brand" href="#"><span style="font-size: 20px; padding:7px; color:#009761;">
+			  <i class="icon-leaf"></i> 
+			</span>
+			Jobber</a>
       <ul class="nav">
         <li><a href="#about">À propos</a></li>
         <li><a href="#contact">Contactez-nous</a></li>
       </ul>
+			<div class="social-medias">	
+		    <i class="icon-facebook-sign"></i> 
+				<i class="icon-twitter-sign"></i> 
+				<i class="icon-linkedin-sign"></i> 
+			</div>
     </div>
   </div>
 </div>
@@ -15,15 +23,16 @@
    <!--   <h1>Trouvez un emploi. <small> Vite.</small></h1> */-->
     </div>
 		<form class="well form-search">
-			      <input type="text" class="input-x-large">
+			      <input type="text" class="input-x-large" placeholder="Recherchez un emploi">
 			      <button class="btn" type="submit" class="btn">
-			      	<div style="font-size: 24px;">
+			      	<div style="font-size: 20px;">
 							  <i class="icon-search"></i> 
 							</div>
 			      </button>
 			    </form>
     <table class="table table-striped">
 	 <tr>
+		<th></th>
 	   <th>Titre</th>
 	   <th>Entreprise</th>
 	   <th>Date</th>
@@ -33,7 +42,9 @@
 	<%  for job in @jobs 
 	scrapper = Scrapper.find(job.line_items.first.scrapper_id)	
 	%>
+	
 	 <tr>
+		<td><i class="icon-arrow-up"></i> </td>
 	   <td><span class="jobtitle">		
 			<%= if job.title.length > 50 
 						link_to job.title[0,50] + "...", job.job_url 

@@ -88,7 +88,9 @@ task :fetch_all_jobs => :environment do
     title = scrapped_h4[$2]
     business = scrapped_h4[$1]
     job_url = post.css('h4 a').attribute("href").text
-
+    tag_list = title.split + business.split
+    
+    
     #Scrapping the date tag
     scrapped_raw_date = post.css('span.date').text
 
@@ -121,7 +123,8 @@ task :fetch_all_jobs => :environment do
                        :job_url       => job_url,
                        :time_scrapped => Time.now.gmtime,
                        :date_posted => date_posted,
-                       :scrapper_id => 2)
+                       :scrapper_id => 2,
+                       :tag_list => tag_list)
     end
 
      line_item = LineItem.create(:job_id => job.id,
@@ -172,6 +175,7 @@ task :fetch_all_jobs => :environment do
       raw_business = post.css('span.bg-block-job dl.clear-block dd.job-regular span.job-info ul li.job-company').text
       raw_business =~ %r{(.*)\s\/(.*)}
       business =  raw_business[$1]
+      tag_list = title.split + business.split
       city = raw_business[$2]
       job_url = root_url.to_s + job_url_directory.to_s
 
@@ -182,7 +186,8 @@ task :fetch_all_jobs => :environment do
                        :job_url       => job_url,
                        :time_scrapped => Time.now.gmtime,
                        :date_posted => date_posted,
-                       :scrapper_id => 3)
+                       :scrapper_id => 3,
+                       :tag_list => tag_list)
 
 
       #Creating the line item

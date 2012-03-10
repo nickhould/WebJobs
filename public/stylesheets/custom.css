@@ -13,16 +13,14 @@ html, body {
 
 .form-search {
 	border:0px;
-	/* Fallback for web browsers that don't support RGBa */
-	background-color: rgb(255, 255, 255);
-	/* RGBa with 0.6 opacity */
-	background-color: rgba(255, 255, 255, 0.01);
+	padding:10px;
+	background-color: rgb(0, 0, 0);
+	/* RGBa  */
+	background-color: rgba(0, 0, 0, 0.04);
 	/* For IE 5.5 - 7*/
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
 	/* For IE 8*/
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-
-	padding:5px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; 
 }
 
 .page-header{
@@ -30,14 +28,43 @@ html, body {
 }
 
 
-
 .table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
 	/* Fallback for web browsers that don't support RGBa */
 	background-color: rgb(0, 0, 0);
 	/* RGBa  */
-	background-color: rgba(0, 0, 0, 0.032);
+	background-color: rgba(0, 0, 0, 0.04);
 	/* For IE 5.5 - 7*/
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
 	/* For IE 8*/
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+.social-medias{
+	float:right;
+	font-size:22px;
+	padding:5px;
+	}
+
+.icon-facebook-sign:hover { 
+  color:#3b5998;
+}
+
+.icon-twitter-sign:hover { 
+  color:#36b7d9;
+}
+
+.icon-linkedin-sign:hover { 
+  color:#0076a8;
+}
+
+.icon-facebook-sign { 
+  padding:5px;
+}
+
+.icon-twitter-sign { 
+  padding:5px;
+}
+
+.icon-linkedin-sign { 
+  padding:5px;
 }

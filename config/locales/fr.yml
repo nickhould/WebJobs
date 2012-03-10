@@ -205,3 +205,5 @@ fr:
   activerecord:
     errors:
       <<: *errors
+      
+  
