@@ -2,7 +2,7 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.xml
   def index
-    @jobs = Job.page(params[:page]).per(20)
+    @job = Job.page(params[:page]).per(20)
     
   	
     respond_to do |format|
