@@ -3,6 +3,9 @@ html, body {
   background-image: url("/images/paper.png");
 }
 
+h1 {
+	color:02114D;
+}
 .navbar-inner {
 	background-image: url("/images/snow.png");  
 }
