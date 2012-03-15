@@ -3,8 +3,8 @@ html, body {
   background-image: url("/images/paper.png");
 }
 
-h1 {
-	color:02114D;
+.brand a{
+	color:#091E55;
 }
 .navbar-inner {
 	background-image: url("/images/snow.png");  
@@ -44,30 +44,34 @@ h1 {
 
 .social-medias{
 	float:right;
-	font-size:22px;
+	font-size:25px;
 	padding:5px;
 	}
 
 .icon-facebook-sign:hover { 
-  color:#3b5998;
+  color:#000000;
 }
 
 .icon-twitter-sign:hover { 
-  color:#36b7d9;
+  color:#000000;
 }
 
 .icon-linkedin-sign:hover { 
-  color:#0076a8;
+  color:#000000;
 }
 
 .icon-facebook-sign { 
   padding:5px;
+  color:#3b5998;
 }
 
 .icon-twitter-sign { 
   padding:5px;
+  color:#36b7d9;
 }
 
 .icon-linkedin-sign { 
   padding:5px;
+  color:#0076a8;
 }
+

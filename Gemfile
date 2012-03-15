@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
-gem 'pg'
+gem 'sqlite3'
 gem 'nokogiri'
 gem 'heroku'
 gem 'kaminari'
