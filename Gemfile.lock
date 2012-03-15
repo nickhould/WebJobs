@@ -54,6 +54,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     nokogiri (1.5.0)
+    pg (0.13.2)
     polyglot (0.3.2)
     rack (1.2.4)
     rack-mount (0.6.14)
@@ -97,6 +98,7 @@ DEPENDENCIES
   heroku
   kaminari
   nokogiri
+  pg
   rails (= 3.0.9)
   rails-i18n
   sqlite3
