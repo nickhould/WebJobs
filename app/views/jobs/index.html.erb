@@ -9,11 +9,13 @@
         <li><a href="#about">À propos</a></li>
         <li><a href="#contact">Contactez-nous</a></li>
       </ul>
-			<div class="social-medias">	
-		    <i class="icon-facebook-sign"></i> 
-				<i class="icon-twitter-sign"></i> 
-				<i class="icon-linkedin-sign"></i> 
-			</div>
+			<p class="pull-right">	
+				<% if current_user %>
+			     <%= current_user.name%> <%= image_tag("#{current_user.image}", :width => '8%', :height => '8%') %> | <%= link_to "Déconnexion", signout_path %>
+				<% else %>
+		      <%= link_to image_tag('/images/linkedin_sign_in.png'), '/auth/linkedin'%> 
+				<% end %>
+		</p>
     </div>
   </div>
 </div>
@@ -22,6 +24,7 @@
     <div class="page-header">
    <!--   <h1>Trouvez un emploi. <small> Vite.</small></h1> */-->
     </div>
+		<div class="page">
 		<form class="well form-search">
 			      <input type="text" class="input-x-large" placeholder="Recherchez un emploi">
 			      <button class="btn" type="submit" class="btn">
@@ -31,27 +34,29 @@
 			      </button>
 			    </form>
     <table class="table table-striped">
+	 <thead>
 	 <tr>
 		<th></th>
 	   <th>Titre</th>
 	   <th>Entreprise</th>
 	   <th>Date</th>
 		 <th class="right"></th>
-	
-	 </tr>
+	</tr>
+	<thead>
 	<%  for job in @jobs 
 	scrapper = Scrapper.find(job.line_items.first.scrapper_id)	
 	%>
 	
 	 <tr>
 		<td><i class="icon-arrow-up"></i> </td>
-	   <td><span class="jobtitle">		
+	   <td><span class="jobtitle">
 			<%= if job.title.length > 50 
 						link_to job.title[0,50] + "...", job.job_url 
 					else
 						link_to job.title, job.job_url 
 						
-					end%></span></td>
+					end%>
+ 				</span></td>
 	   <td><%= if job.business.length > 50
 							job_business = job.business[0,50].titleize + "..." 
  					   else
@@ -68,6 +73,7 @@
 	 </tr>
 	<% end %>
 	</table>
+	</div>
 	<%= paginate @jobs%>
   </div>
   <footer>

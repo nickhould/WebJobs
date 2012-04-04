@@ -19,4 +19,9 @@ class Job < ActiveRecord::Base
   def self.promo_false
     User.find(self.joins.find_all_by_promo(false))
   end
+  
+  def check_if_job_exist
+    job = Job.find_or_create_by_title_and_business(:title => self.title, :business => self.business)
+  end
+  
 end

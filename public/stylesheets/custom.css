@@ -17,20 +17,22 @@ html, body {
 .form-search {
 	border:0px;
 	padding:10px;
-	background-color: rgb(0, 0, 0);
-	/* RGBa  */
-	background-color: rgba(0, 0, 0, 0.04);
-	/* For IE 5.5 - 7*/
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-	/* For IE 8*/
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; 
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background-color:white;
+}
+
+input {
+	padding: 8px;
 }
 
 .page-header{
 	padding:2px;
 }
 
-
+.well{
+	box-shadow:none;
+}
 .table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
 	/* Fallback for web browsers that don't support RGBa */
 	background-color: rgb(0, 0, 0);
@@ -42,11 +44,33 @@ html, body {
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
-.social-medias{
-	float:right;
-	font-size:25px;
-	padding:5px;
-	}
+.pull-right{
+	font-size:12px;
+  padding:7px;
+}
+
+
+.th{
+ padding:0px;	
+}
+
+a{
+	text-decoration:none;
+	
+}
+.page{
+	-moz-border-radius: 45px;
+	border-radius: 45px;
+	background-color:white;
+	padding:25px 15px 25px 15px;
+
+}
+
+
+
+.welcome-message{
+	font:10px;
+}
 
 .icon-facebook-sign:hover { 
   color:#000000;
@@ -74,4 +98,6 @@ html, body {
   padding:5px;
   color:#0076a8;
 }
+
+
 

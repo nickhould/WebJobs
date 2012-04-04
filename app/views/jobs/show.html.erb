@@ -20,6 +20,10 @@
   <%= @job.date_scrapped %>
 </p>
 
+<p>
+  <b>Tags:</b>
+  <%= @job.tags.count %>
+</p>
 
 <%= link_to 'Edit', edit_job_path(@job) %> |
 <%= link_to 'Back', jobs_path %>

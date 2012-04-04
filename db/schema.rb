@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120309025536) do
+ActiveRecord::Schema.define(:version => 20120330205739) do
 
   create_table "jobs", :force => true do |t|
     t.string   "title"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20120309025536) do
     t.date     "date_posted"
     t.datetime "date_scrapped"
     t.integer  "scrapper_id"
+    t.integer  "likes"
   end
 
   create_table "line_items", :id => false, :force => true do |t|
@@ -56,6 +57,15 @@ ActiveRecord::Schema.define(:version => 20120309025536) do
 
   create_table "tags", :force => true do |t|
     t.string "name"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image"
   end
 
 end
